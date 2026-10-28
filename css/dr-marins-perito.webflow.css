@@ -1,6 +1,11 @@
 :root {
-  --white: white;
-  --black: black;
+  --white: #ffffff;
+  --black: #000000;
+  --brand-primary: #007a87;
+  --brand-hover: #00626d;
+  --text-primary: #1a202c;
+  --text-secondary: #525866;
+  --border-light: #e2e8f0;
 }
 
 .w-layout-grid {
@@ -13,19 +18,19 @@
 }
 
 .text-size-medium {
-  color: #767681;
+  color: var(--text-secondary);
   font-family: Lato, sans-serif;
   font-size: 18px;
   line-height: 26px;
 }
 
 .button {
-  border: 1px none var(--\<unknown\|relume-variable-color-neutral-1\>);
-  color: var(--\<unknown\|relume-variable-color-neutral-2\>);
+  border: 1px none var(--brand-primary);
+  color: var(--white);
   text-align: center;
   -webkit-text-fill-color: inherit;
   background-color: #fff;
-  background-image: linear-gradient(#00a0b1, #00a0b1);
+  background-image: linear-gradient(var(--brand-primary), var(--brand-primary));
   background-clip: border-box;
   padding: .75rem 1.5rem;
   font-family: Lato, sans-serif;
@@ -33,7 +38,7 @@
 }
 
 .button.is-secondary {
-  color: var(--\<unknown\|relume-variable-color-neutral-1\>);
+  color: var(--brand-primary);
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -133,7 +138,7 @@
 
 .cta-button-primary {
   color: #fff;
-  background-color: #00a0b1;
+  background-color: var(--brand-primary);
   border-radius: 8px;
   padding: 1rem 2rem;
   font-family: Lato, sans-serif;
@@ -142,8 +147,14 @@
 }
 
 .cta-button-primary:hover {
-  background-color: #0292a2;
+  background-color: var(--brand-hover);
   transform: scale(1.05);
+}
+
+.cta-button-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .text-color-white {
@@ -159,9 +170,9 @@
 }
 
 .button-2 {
-  border: 1px solid var(--\<unknown\|relume-variable-color-neutral-1\>);
-  background-color: var(--\<unknown\|relume-variable-color-neutral-1\>);
-  color: var(--\<unknown\|relume-variable-color-neutral-2\>);
+  border: 1px solid var(--brand-primary);
+  background-color: var(--brand-primary);
+  color: var(--white);
   text-align: center;
   padding: .75rem 1.5rem;
   text-decoration: none;
@@ -173,12 +184,12 @@
 }
 
 .button-2.is-secondary {
-  color: var(--\<unknown\|relume-variable-color-neutral-1\>);
+  color: var(--brand-primary);
   background-color: rgba(0, 0, 0, 0);
 }
 
 .button-2.is-link {
-  color: var(--\<unknown\|relume-variable-color-neutral-1\>);
+  color: var(--brand-primary);
   background-color: rgba(0, 0, 0, 0);
   border-style: none;
   padding: .25rem 0;
@@ -209,22 +220,27 @@
 }
 
 .navbar2_dropdown-link.w--current {
-  color: var(--\<unknown\|relume-variable-color-neutral-1\>);
+  color: var(--brand-primary);
 }
 
 .navbar-component {
   width: 100%;
   height: auto;
   min-height: 4.5rem;
-  border-bottom: 1px solid var(--\<unknown\|relume-variable-border-color-1\>);
-  background-color: var(--\<unknown\|relume-variable-color-neutral-2\>);
+  border-bottom: 1px solid var(--border-light);
+  background-color: var(--white);
   align-items: center;
   padding: 1rem 5%;
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .navbar-component.drop-shadow {
-  z-index: 1;
+  z-index: 1000;
   background-image: linear-gradient(#fff, #fff);
   border: 1px #000;
   justify-content: center;
@@ -244,8 +260,8 @@
 }
 
 .navbar2_dropdown-list.w--open {
-  border: 1px solid var(--\<unknown\|relume-variable-border-color-1\>);
-  background-color: var(--\<unknown\|relume-variable-color-neutral-2\>);
+  border: 1px solid var(--border-light);
+  background-color: var(--white);
   padding: .5rem;
   position: absolute;
 }
@@ -283,7 +299,7 @@
 }
 
 .navbar2_link.w--current {
-  color: var(--\<unknown\|relume-variable-color-neutral-1\>);
+  color: var(--brand-primary);
   font-weight: 700;
 }
 
@@ -383,8 +399,8 @@
 }
 
 .esg-item-heading {
-  color: #00a0b1;
-  font-weight: 500;
+  color: var(--brand-primary);
+  font-weight: 600;
 }
 
 .text-size-medium-2 {
@@ -526,7 +542,7 @@
 }
 
 .navbar2_link_whatsapp.w--current {
-  color: var(--\<unknown\|relume-variable-color-neutral-1\>);
+  color: var(--brand-primary);
 }
 
 .margin-vertical, .margin-vertical.margin-medium {
@@ -615,7 +631,7 @@
 }
 
 .text-style-link {
-  color: var(--\<unknown\|relume-variable-link-color-1\>);
+  color: var(--brand-primary);
   text-decoration: underline;
 }
 
@@ -630,7 +646,7 @@
   height: 1.125rem;
   min-height: 1.125rem;
   min-width: 1.125rem;
-  border: 1px solid var(--\<unknown\|relume-variable-color-neutral-1\>);
+  border: 1px solid var(--brand-primary);
   cursor: pointer;
   border-radius: 0;
   margin-top: 0;
@@ -674,8 +690,8 @@
 .form_input {
   height: auto;
   min-height: 2.75rem;
-  background-color: var(--\<unknown\|relume-variable-color-neutral-2\>);
-  color: var(--\<unknown\|relume-variable-text-color-1\>);
+  background-color: var(--white);
+  color: var(--text-primary);
   border: 1px solid #00a0b1;
   border-radius: 8px;
   margin-bottom: 0;
@@ -744,7 +760,7 @@
 
 .cta-button-secondary {
   color: #fff;
-  background-color: #00a0b1;
+  background-color: var(--brand-primary);
   border-radius: 8px;
   padding: .5rem 1rem;
   font-family: Lato, sans-serif;
@@ -753,7 +769,7 @@
 }
 
 .cta-button-secondary:hover {
-  background-color: #0292a2;
+  background-color: var(--brand-hover);
   transform: scale(1.05);
 }
 
@@ -811,7 +827,7 @@
 }
 
 .text-color-green {
-  color: #00a0b1;
+  color: var(--brand-primary);
 }
 
 .curriculum-item-column {
@@ -1018,7 +1034,7 @@
   .menu-icon2_line-bottom {
     width: 24px;
     height: 2px;
-    background-color: var(--\<unknown\|relume-variable-color-neutral-1\>);
+    background-color: var(--brand-primary);
     border: 1px solid #00a0b1;
     padding-bottom: 0;
     padding-right: 0;
@@ -1046,7 +1062,7 @@
   .menu-icon2_line-top {
     width: 24px;
     height: 2px;
-    background-color: var(--\<unknown\|relume-variable-color-neutral-1\>);
+    background-color: var(--brand-primary);
     border: 1px solid #00a0b1;
     padding-bottom: 0;
     padding-right: 0;
@@ -1060,13 +1076,13 @@
   }
 
   .navbar-component {
-    z-index: 3;
+    z-index: 1000;
     background-image: linear-gradient(#fff, #fff);
     position: fixed;
   }
 
   .navbar-component.drop-shadow {
-    z-index: 2;
+    z-index: 1000;
   }
 
   .navbar2_dropdwn-toggle {
@@ -1128,7 +1144,7 @@
   .menu-icon2_line-middle {
     width: 24px;
     height: 2px;
-    background-color: var(--\<unknown\|relume-variable-color-neutral-1\>);
+    background-color: var(--brand-primary);
     border: 1px solid #00a0b1;
     justify-content: center;
     align-items: center;
@@ -1147,8 +1163,8 @@
   }
 
   .navbar-menu {
-    border-bottom: 1px solid var(--\<unknown\|relume-variable-border-color-1\>);
-    background-color: var(--\<unknown\|relume-variable-color-neutral-2\>);
+    border-bottom: 1px solid var(--border-light);
+    background-color: var(--white);
     -webkit-text-fill-color: inherit;
     background-clip: border-box;
     justify-content: center;
@@ -1492,3 +1508,922 @@
 #w-node-_78e78cb9-6cbb-05c0-8614-9c5b8bf49a9b-b3e3eec8 {
   justify-self: end;
 }
+
+/* ==========================================================================
+   FRENTES ESPECIALIZADAS: PERÍCIA CONTÁBIL & ENGENHARIA DA COMPUTAÇÃO / TI
+   ========================================================================== */
+
+html {
+  scroll-padding-top: 5.5rem;
+}
+
+#tipos-pericias,
+#pericia-contabil,
+#pericia-tecnologia {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Acessibilidade: foco visível para navegação por teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #00a0b1;
+  outline-offset: 3px;
+}
+
+/* Ajuste de navegação desktop e mobile para acomodar todos os itens com perfeição */
+.navbar2_link {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-component {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .navbar-container {
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 8px;
+  }
+
+  .navbar-logo-link {
+    flex-shrink: 0;
+    min-width: 130px;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    max-width: 140px;
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar2_link {
+    white-space: nowrap;
+    padding: 0.5rem 0.42rem;
+    font-size: 0.86rem;
+    gap: 0.35rem;
+  }
+
+  .navbar-button-wrapper {
+    margin-left: 0.25rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar-component {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .navbar-container {
+    grid-column-gap: 16px;
+  }
+
+  .navbar-logo-link {
+    min-width: 170px;
+  }
+
+  .navbar-logo {
+    max-width: 180px;
+  }
+
+  .navbar2_link {
+    padding: 0.5rem 0.85rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #w-node-f45046bb-0dfd-668d-4f1b-164433b4af9d-33b4af99,
+  .navbar-menu,
+  .navbar-menu.is-page-height-tablet {
+    justify-self: stretch !important;
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    box-sizing: border-box;
+    padding: 0.75rem 5% 1.25rem !important;
+    box-shadow: 0 12px 24px rgba(6, 96, 105, 0.16);
+  }
+
+  .navbar-menu .navbar2_link {
+    display: flex !important;
+    align-items: center;
+    width: 100%;
+    padding: 0.85rem 0;
+    font-size: 1.05rem;
+    text-decoration: none;
+  }
+
+  .navbar-menu-whatsapp-mobile {
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+
+  .navbar-menu-whatsapp-mobile .navbar2_link {
+    display: flex !important;
+    align-items: center;
+    gap: 0.6rem;
+    border-bottom: none;
+    padding: 0.85rem 0 0.25rem;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
+
+/* Barra de atalhos rápidos para as frentes especializadas */
+.specialty-Switch-bar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2eff1;
+  padding: 1.25rem 2rem;
+}
+
+.specialty-switch-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.specialty-switch-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #0a2e46;
+  margin: 0;
+}
+
+.specialty-switch-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.specialty-pill-link {
+  color: #008999;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.specialty-pill-link:hover {
+  color: #0a2e46;
+}
+
+/* Estrutura comum das seções de especialidade */
+.section-specialty-contabil {
+  background-color: #ffffff;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-top: 1px solid #e6f2f4;
+  position: relative;
+}
+
+.section-specialty-tech {
+  background-color: #f0fafb;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-top: 1px solid #d8eef1;
+  position: relative;
+}
+
+.specialty-header {
+  max-width: 52rem;
+  margin: 0 auto 3.5rem auto;
+  text-align: center;
+}
+
+.specialty-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #e6f7f9;
+  color: #007d8a;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.specialty-eyebrow.is-tech {
+  background-color: #0a2e46;
+  color: #6ce5f2;
+}
+
+.specialty-title {
+  color: #0a2e46;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.specialty-lead {
+  color: #4a5568;
+  font-family: Lato, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Subtítulos de blocos internos */
+.block-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e6f2f4;
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.block-section-title {
+  color: #0a2e46;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.block-section-subtitle {
+  color: #5a6577;
+  font-family: Lato, sans-serif;
+  font-size: 1rem;
+  margin: 0.35rem 0 0 0;
+}
+
+/* Grade de serviços contábeis (3 colunas no desktop) */
+.contabil-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.contabil-service-card {
+  background-color: #f8fcfd;
+  border: 1px solid #e1f1f4;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.contabil-service-card:hover {
+  background-color: #ffffff;
+  border-color: #00a0b1;
+  box-shadow: 0 10px 24px rgba(6, 96, 105, 0.1);
+  transform: translateY(-2px);
+}
+
+.contabil-card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.specialty-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #e3f6f8;
+  color: #008999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.specialty-icon-box svg {
+  width: 22px;
+  height: 22px;
+}
+
+.contabil-card-title {
+  color: #0a2e46;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.contabil-card-desc {
+  color: #4a5568;
+  font-family: Lato, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Bloco: Experiência que antecipa problemas (Contábil) */
+.preventive-advisory-panel {
+  background: linear-gradient(135deg, #0a2e46 0%, #074757 100%);
+  border-radius: 16px;
+  padding: 3rem;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 14px 30px rgba(6, 46, 70, 0.18);
+}
+
+.preventive-badge {
+  display: inline-block;
+  background-color: rgba(0, 160, 177, 0.25);
+  border: 1px solid rgba(108, 229, 242, 0.4);
+  color: #84ecf7;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.preventive-title {
+  color: #ffffff;
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.preventive-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Lato, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.preventive-quote {
+  border-left: 3px solid #00d2e8;
+  padding-left: 1rem;
+  margin-top: 1.25rem;
+  color: #ffffff;
+  font-family: Lato, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.preventive-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.preventive-pillar-item {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.preventive-pillar-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: #00a0b1;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.preventive-pillar-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.preventive-pillar-title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
+}
+
+.preventive-pillar-desc {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: Lato, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   FRENTE 2: ENGENHARIA DA COMPUTAÇÃO, TECNOLOGIA E EVIDÊNCIAS DIGITAIS
+   ========================================================================== */
+
+/* Metodologia / Cadeia de Custódia e Rastreabilidade */
+.forensic-method-bar {
+  background-color: #ffffff;
+  border: 1px solid #d5ebee;
+  border-radius: 14px;
+  padding: 2rem;
+  margin-bottom: 3.5rem;
+  box-shadow: 0 6px 18px rgba(6, 96, 105, 0.06);
+}
+
+.forensic-method-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.forensic-method-title {
+  color: #0a2e46;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem 0;
+}
+
+.forensic-method-subtitle {
+  color: #4a5568;
+  font-family: Lato, sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 44rem;
+}
+
+.forensic-scope-badge {
+  background-color: #f0fafb;
+  border: 1px solid #bde3e8;
+  color: #075966;
+  font-family: Lato, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  max-width: 24rem;
+  line-height: 1.4;
+}
+
+.forensic-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.forensic-step-card {
+  background-color: #f8fcfd;
+  border: 1px solid #e2f1f4;
+  border-radius: 10px;
+  padding: 1.25rem;
+  position: relative;
+}
+
+.forensic-step-num {
+  display: inline-block;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #008999;
+  background-color: #e0f5f7;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.65rem;
+  letter-spacing: 0.5px;
+}
+
+.forensic-step-title {
+  color: #0a2e46;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem 0;
+}
+
+.forensic-step-desc {
+  color: #4a5568;
+  font-family: Lato, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Categorias Agrupadas de Tecnologia (6 domínios técnicos) */
+.tech-domains-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.tech-domain-card {
+  background-color: #ffffff;
+  border: 1px solid #d8ebee;
+  border-radius: 12px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: all 0.2s ease;
+}
+
+.tech-domain-card:hover {
+  border-color: #00a0b1;
+  box-shadow: 0 10px 24px rgba(6, 96, 105, 0.1);
+}
+
+.tech-domain-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.tech-domain-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #0a2e46;
+  color: #5ce1ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tech-domain-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.tech-domain-title {
+  color: #0a2e46;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 0.4rem 0;
+}
+
+.tech-domain-desc {
+  color: #4a5568;
+  font-family: Lato, sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.tech-domain-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #edf5f7;
+}
+
+.tech-tag {
+  background-color: #f0fafb;
+  color: #075966;
+  font-family: Lato, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid #d5eef2;
+}
+
+/* Painel Sistemas Embarcados de Tempo Real, Sistemas Críticos e Consultoria */
+.embedded-systems-panel {
+  background: linear-gradient(135deg, #071f30 0%, #0d3650 100%);
+  border-radius: 16px;
+  padding: 3rem;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 14px 30px rgba(7, 31, 48, 0.2);
+}
+
+.embedded-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.embedded-sector-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.sector-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(0, 160, 177, 0.2);
+  border: 1px solid rgba(92, 225, 239, 0.45);
+  color: #ffffff;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-family: Lato, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.sector-badge svg {
+  width: 18px;
+  height: 18px;
+  color: #5ce1ef;
+}
+
+.consulting-box {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.consulting-box-title {
+  color: #5ce1ef;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.consulting-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.consulting-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: Lato, sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.consulting-list li svg {
+  width: 18px;
+  height: 18px;
+  color: #00d2e8;
+  flex-shrink: 0;
+}
+
+/* Bloco de Apoio Jurídico e Conversão (CTA contextual) */
+.legal-support-cta-bar {
+  background-color: #ffffff;
+  border: 1px solid #ccebef;
+  border-left: 5px solid #00a0b1;
+  border-radius: 12px;
+  padding: 2rem 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 8px 20px rgba(6, 96, 105, 0.08);
+}
+
+.legal-support-cta-bar.is-contabil {
+  background-color: #f8fcfd;
+}
+
+.legal-support-content {
+  max-width: 44rem;
+}
+
+.legal-support-title {
+  color: #0a2e46;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.45rem 0;
+}
+
+.legal-support-text {
+  color: #4a5568;
+  font-family: Lato, sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.legal-support-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.cta-button-outline {
+  color: #0a2e46;
+  background-color: transparent;
+  border: 1px solid #00a0b1;
+  border-radius: 8px;
+  padding: 0.9rem 1.5rem;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cta-button-outline:hover {
+  background-color: #e6f7f9;
+  color: #007d8a;
+}
+
+/* Destaque nos cards de Tipos de Perícias que possuem seção aprofundada */
+.pericia-item.is-featured-specialty {
+  border: 1.5px solid #00a0b1;
+  box-shadow: 0 8px 20px rgba(0, 160, 177, 0.12);
+}
+
+/* Responsividade das novas seções */
+@media screen and (max-width: 991px) {
+  .contabil-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .preventive-advisory-panel,
+  .embedded-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.25rem;
+  }
+
+  .forensic-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-domains-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legal-support-cta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .specialty-Switch-bar {
+    padding: 1rem 1.25rem;
+  }
+
+  .specialty-switch-inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .specialty-switch-links {
+    flex-direction: column;
+  }
+
+  .specialty-pill-link {
+    justify-content: center;
+  }
+
+  .section-specialty-contabil,
+  .section-specialty-tech {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .specialty-title {
+    font-size: 1.65rem;
+  }
+
+  .specialty-lead {
+    font-size: 1rem;
+  }
+
+  .contabil-services-grid,
+  .forensic-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .preventive-advisory-panel,
+  .embedded-systems-panel {
+    padding: 1.5rem;
+  }
+
+  .preventive-title {
+    font-size: 1.45rem;
+  }
+
+  .legal-support-cta-bar {
+    padding: 1.5rem;
+  }
+
+  .legal-support-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .legal-support-actions a {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Botão Flutuante WhatsApp Padronizado */
+.whatsapp-float-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  animation: whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-float-btn:hover,
+.whatsapp-float-btn:focus-visible {
+  background-color: #128c7e;
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes whatsapp-pulse {
+  0% { box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6); }
+  100% { box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); }
+}
+
+@media screen and (max-width: 767px) {
+  .whatsapp-float-btn {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+  .whatsapp-float-btn img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* Acessibilidade: respeitar preferência de redução de movimento (WCAG 2.2) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
